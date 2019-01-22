@@ -1,0 +1,12 @@
+<h1>Songs</h1>
+{% if latest_song_list %}
+    <ul>
+    {% for song in latest_song_list %}
+        <li><a href="{{song.video_link}}">{{ song.title }}</a><p>Released in: {{song.release_year}}</p></li>
+    </br>
+    {% endfor %}
+    </ul>
+    <a href="/artists">Go Back</a>
+{% else %}
+    <p>No songs are available.</p>
+{% endif %}
